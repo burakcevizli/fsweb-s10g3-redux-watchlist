@@ -10,7 +10,7 @@ export const movies = [{
   "director": "Christopher Nolan",
   "actors": "Guy Pearce, Carrie-Anne Moss, Joe Pantoliano, Mark Boone Junior",
   "plot": "A man juggles searching for his wife's murderer and keeping his short-term memory loss from being an obstacle.",
-  "posterUrl": "https://www.moviemem.com/wp-content/uploads/2020/07/MEMENTO1SH.jpg"
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTcyNjk1MjgtOWI3Mi00YzQwLWI5MTktMzY4ZmI2NDAyNzYzXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
 }, {
   "id": 21,
   "title": "Black Swan",
