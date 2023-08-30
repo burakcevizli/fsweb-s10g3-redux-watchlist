@@ -10,16 +10,17 @@ function App() {
   const [sira, setSira] = useState(0);
   const favMovies = useSelector(store => store.favReducer.watchList);
   const movies = useSelector(store => store.movieReducer.movies)
-  
   const dispatch = useDispatch()
   const handleAddList = () => {
     dispatch(addList(movies[sira]))
     dispatch(deleteMovie(movies[sira].id))
   }
 
-
+  function oncekiFilm() {
+    setSira(sira > 0 ? sira - 1 : movies.length - 1)
+  }
   function sonrakiFilm() {
-    setSira(sira + 1);
+    setSira(sira === movies.length - 1 ? 0 : sira + 1);
   }
 
   return (
@@ -37,12 +38,19 @@ function App() {
           <Movie sira={sira} />
 
           <div className="flex gap-3 justify-end py-3">
-            <button
+            {sira !== 0 && <button onClick={oncekiFilm}
+              className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500"
+            >
+              Önceki
+            </button>
+            }
+            {sira !== movies.length - 1 && <button
               onClick={sonrakiFilm}
               className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500"
             >
               Sıradaki
             </button>
+            }
             <button onClick={handleAddList} className="select-none px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white">
               Listeme ekle
             </button>

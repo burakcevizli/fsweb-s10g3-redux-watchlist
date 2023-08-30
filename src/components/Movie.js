@@ -1,12 +1,11 @@
 import { useSelector } from "react-redux";
 
-
 export default function Movie(props) {
   const movies = useSelector(store => store.movieReducer.movies)
   const movie = movies[props.sira];
   
 
-  return (
+  return ( movie ?
     <div className="flex bg-white shadow-lg items-start">
       <img src={movie.posterUrl} alt={movie.title} className="max-w-[18rem] w-2/5 block" />
       <div className="p-8 flex flex-col gap-4 text-sm">
@@ -28,6 +27,6 @@ export default function Movie(props) {
           <span className="block px-2 py-1 rounded-md border border-zinc-400">{movie.runtime}dk</span>
         </div>
       </div>
-    </div>
+    </div> : "FİLM KALMADI YUH !"
   )
 };
