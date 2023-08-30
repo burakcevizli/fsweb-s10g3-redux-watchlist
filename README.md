@@ -30,7 +30,6 @@ Proje `movies.js` dosyasında yer alan filmleri sırayla görüntüleyebildiniz 
 * [ ] `redux` ve `react-redux` paketlerini projenize ekleyin.
 
 * [ ] Projede kullanılan verilerin hangileri redux store'u içerisinde tutulmalı? Bu verilerden `initialState` olarak kullanılması gereken var mı? Planlayın.
- 
 
 * [ ] Proje içerisinde store içerisindeki veriyi hangi fonksiyonlarla değiştirmeniz gerekecek? Düşünün ve reducerınızı oluşturmaya başlayın.
 
