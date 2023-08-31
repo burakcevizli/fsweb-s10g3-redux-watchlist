@@ -14,6 +14,7 @@ function App() {
   const handleAddList = () => {
     dispatch(addList(movies[sira]))
     dispatch(deleteMovie(movies[sira].id))
+    setSira(sira === movies.length - 1 ? sira - 1 : sira);
   }
 
   function oncekiFilm() {
